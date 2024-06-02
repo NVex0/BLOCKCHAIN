@@ -44,3 +44,6 @@ Contract này mô phỏng cho attacker:
 
 #### Biện pháp ngăn chặn tấn công:
 
++ Sử dụng hàm `send()` thay vì `call.value()`. Điều này sẽ hạn chế bất cứ hàm bên ngoài (external function) nào được thực thi. `send()` cho phép chúng ta thực thi mã bên ngoài, nhưng việc giới hạn lượng gas quy định ở mức 2.300 gas, nó chỉ đủ để ghi lại một sự kiện, nhưng không đủ để khởi động một cuộc tấn công. Bên cạnh đó `send()` sẽ tự động revert nếu gửi thất bại. Trong khi `call()` không giới hạn lượng gas quy định nên nó không an toàn với reentrancy.
+
++ Cập nhật số dư trước khi giao tiếp với các contract bên ngoài, như ví dụ ở trên, trong hàm `withdrawal()`, dòng `(bool success, ) = msg.sender.call{value: bal}("");` sẽ liên tục chạy và gọi tới hàm `receive()` trong contract của attacker và số dư không thể cập nhật để dừng được (`theBalances[msg.sender] -= 0;`) cho tới khi bank cạn tiền.
