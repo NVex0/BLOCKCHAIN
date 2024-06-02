@@ -37,3 +37,7 @@ Contract này mô phỏng cho attacker:
   + 3. Khi này, ether rút được sẽ trả về contract của attacker - cụ thể là trả vào hàm `receive()` (nếu không có hàm này thì sẽ gọi vào hàm `fallback()`).
    
   + 4. Khi đã trả vào hàm `receive()` này, cuộc tấn công chính thức bắt đầu. Khi này nó sẽ check balance trong Bank, chừng nào còn lớn hơn 1 thì lại gọi về hàm `withdrawal()`, quay lại bước 3, và cứ lặp đi lặp lại bước 3 và 4 tới khi Bank không còn đồng nào.
+
+#### Demo:
+
+[Demo Reentrancy Attack](https://github.com/NVex0/BLOCKCHAIN/raw/main/Reentrancy%20Attack/Reentrancy_Attack.mp4)
