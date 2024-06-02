@@ -40,4 +40,4 @@ Contract này mô phỏng cho attacker:
 
 #### Demo:
 
-[Demo Reentrancy Attack](https://github.com/NVex0/BLOCKCHAIN/raw/main/Reentrancy%20Attack/Reentrancy_Attack.mp4)
+[Demo Reentrancy Attack](https://drive.google.com/file/d/1gUakY2Ddq3OtWXNXv85yTLqnFPRJSc9Y/view?usp=sharing)
