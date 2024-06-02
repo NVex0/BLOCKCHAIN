@@ -30,13 +30,13 @@ Contract này mô phỏng cho attacker:
 
   Theo như trên ảnh:
 
-  + 1. Đầu tiên attacker nạp vào 1 ether vào bank.
+  1. Đầu tiên attacker nạp vào 1 ether vào bank.
    
-  + 2. Việc nạp 1 ether vào bank là để thỏa mãn requirement của hàm withdrawal (muốn rút thì tối thiểu phải có 1 ether), và sau khi thỏa rồi thì attacker sẽ rút được 1 ether.
+  2. Việc nạp 1 ether vào bank là để thỏa mãn requirement của hàm withdrawal (muốn rút thì tối thiểu phải có 1 ether), và sau khi thỏa rồi thì attacker sẽ rút được 1 ether.
    
-  + 3. Khi này, ether rút được sẽ trả về contract của attacker - cụ thể là trả vào hàm `receive()` (nếu không có hàm này thì sẽ gọi vào hàm `fallback()`).
+  3. Khi này, ether rút được sẽ trả về contract của attacker - cụ thể là trả vào hàm `receive()` (nếu không có hàm này thì sẽ gọi vào hàm `fallback()`).
    
-  + 4. Khi đã trả vào hàm `receive()` này, cuộc tấn công chính thức bắt đầu. Khi này nó sẽ check balance trong Bank, chừng nào còn lớn hơn 1 thì lại gọi về hàm `withdrawal()`, quay lại bước 3, và cứ lặp đi lặp lại bước 3 và 4 tới khi Bank không còn đồng nào.
+  4. Khi đã trả vào hàm `receive()` này, cuộc tấn công chính thức bắt đầu. Khi này nó sẽ check balance trong Bank, chừng nào còn lớn hơn 1 thì lại gọi về hàm `withdrawal()`, quay lại bước 3, và cứ lặp đi lặp lại bước 3 và 4 tới khi Bank không còn đồng nào.
 
 #### Demo:
 
