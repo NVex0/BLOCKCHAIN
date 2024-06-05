@@ -14,3 +14,8 @@ Và thử tăng balance vượt quá giá trị max của uint8 (255), lúc này
 
 ##### Demo:
 
+##### Biện pháp ngăn chặn:
+
++ Thêm 1 hàm xử lý với các giá trị vượt khoảng cho phép của kiểu đó.
+
++ Sử dụng thư viện SafeMath trong code.
