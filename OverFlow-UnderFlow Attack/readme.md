@@ -2,5 +2,5 @@ OverFlow-UnderFlow Attack: Overflows/underflows là lỗi xảy ra khi kết qu�
 
 Ví dụ contract sau:
 
-![image](https://github.com/NVex0/BLOCKCHAIN/assets/113530029/74a342a6-c5bd-4064-af7d-67a5de058622)
+![image](https://github.com/NVex0/BLOCKCHAIN/assets/113530029/40aadd88-ad0e-433a-aeba-df26fb2bb583)
 
