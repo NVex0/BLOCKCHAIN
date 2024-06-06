@@ -12,10 +12,26 @@ Và thử tăng balance vượt quá giá trị max của uint8 (255), lúc này
 
 ![image](https://github.com/NVex0/BLOCKCHAIN/assets/113530029/057427c1-d304-4726-a51c-675a35c3569d)
 
-##### Demo:
+##### Demo Attack:
+
+[Overflow-Underflow Attack](https://drive.google.com/file/d/1gbFQNdkkHlnjIViOHcrQlNM629AVUNWX/view?usp=sharing)
 
 ##### Biện pháp ngăn chặn:
 
 + Thêm 1 hàm xử lý với các giá trị vượt khoảng cho phép của kiểu đó.
 
+  Define các giá trị chặn khoảng:
+
+  ![image](https://github.com/NVex0/BLOCKCHAIN/assets/113530029/93e9c0ad-1130-4084-b7db-6ff43c925ab4)
+
+  Nếu giá trị mới vượt giá trị chặn thì trả về failed, require không thỏa mãn:
+
+  ![image](https://github.com/NVex0/BLOCKCHAIN/assets/113530029/2e3924dd-9985-47e2-b793-c1f539955c47)
+
+  ###### Demo ngăn chặn:
+
+  [Overflow-Underflow Prevent](https://drive.google.com/file/d/1BUCNuxUJzpN4Q9e2zt4RfPlbaf31_5QC/view?usp=sharing)
+
 + Sử dụng thư viện SafeMath trong code.
+
+  [Safe Math](https://github.com/ConsenSysMesh/openzeppelin-solidity/blob/master/contracts/math/SafeMath.sol)
